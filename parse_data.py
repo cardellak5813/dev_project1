@@ -12,15 +12,17 @@ defop = editconf.find("{}default-operation".format(ns))
 testop = editconf.find("{}test-option".format(ns))
 print("The default-operation contains: {}".format(defop.text))
 print("The test-option contains: {}".format(testop.text))
+print()
 
 # This section parses json data #
 with open('data.json','r') as json_file:
     jsondata = json.load(json_file)
 print(jsondata)
+print()
 
 # This section parses yaml data #
 with open('data.yaml', 'r') as yaml_file:
-    yamldata = yaml.load(yaml_file)
+    yamldata = yaml.safe_load(yaml_file)
 print(yamldata)
 
 
