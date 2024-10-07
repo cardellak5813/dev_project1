@@ -17,12 +17,12 @@ print()
 # This section parses json data #
 with open('data.json','r') as json_file:
     jsondata = json.load(json_file)
+jsonKey = ("{}".format(jsondata['access_token']))
 print(jsondata)
 print()
 
 # This section parses yaml data #
 with open('data.yaml', 'r') as yaml_file:
     yamldata = yaml.safe_load(yaml_file)
+yamlKey = ("{}".format(yamldata['access_token']))
 print(yamldata)
-
-
